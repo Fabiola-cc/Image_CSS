@@ -1,0 +1,179 @@
+.contenedor {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 400px; /* Ancho de la imagen */
+  height: 600px; /* Alto de la imagen */
+}
+
+/*DUCK ELEMENTS*/
+.duck {
+
+}
+
+/*----head----*/
+.head {
+  
+}
+
+.face {
+  position: relative;
+  width: 260px;
+  height: 200px;
+  background-color: #F5F5F5;
+  border-radius: 50%;
+}
+
+.eye {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: #242323;
+  border-radius: 50%;
+}
+
+.beak {
+  position: relative;
+  width: 150px;
+  height: 90px;
+  background-color: #F5AA95;
+  border-radius: 50%;
+}
+
+/*----body----*/
+.neck {
+  position: relative;
+  width: 90px;
+  height: 150px;
+  background-color: #F5F5F5;
+}
+
+.body {
+  position: relative;
+  width: 250px;
+  height: 230px;
+  background-color: #F5F5F5;
+  border-radius: 55%;
+}
+
+.wing {
+  position: relative;
+  width: 85px;
+  height: 70px;
+  background-color: #F5F5F5;
+  border-radius: 55%;
+  border: 2px solid #E9DAD0;
+}
+
+/*--bottom--*/
+.leg {
+  position: relative;
+  width: 20px;
+  height: 100px;
+  background-color: #F3AA92;
+  border-radius: 30%;
+}
+
+.paw {
+  position: relative;
+  width: 40px;
+  height: 70px;
+  background-color: #F3AA92;
+  border-radius: 40%;
+}
+
+.paw-bottom {
+  position: relative;
+  width: 38px;
+  height: 65px;
+  background-color: #F58B78;
+  border-radius: 40%;
+}
+
+/*FLOWER ELEMENTS*/
+.flower{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.center{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #F5E182;
+  top: 50%;
+  left: 50%;
+  transform: translate(-7px, -80px);
+}
+
+.petal{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #E99ABA;
+}
+
+.petal:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -100px);
+}
+
+.petal:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(20%, -90px);
+}
+
+.petal:nth-child(3) {
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -70px);
+}
+
+.petal:nth-child(4) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -70px);
+}
+
+.petal:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -90px);
+}
+
+.stem{
+  position: absolute;
+  width: 8px;
+  height: 50px;
+  background-color: #587523;
+}
+
+.leaf{
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background-color: #587523;
+  border-radius: 50%;  
+}
+
+/*EXTRAS*/
+.nube {
+  width: 200px;
+  height: 50px;
+  background-color: grey;
+  border-radius: 40px; 
+  box-shadow: -20px 20px 0px rgba(0, 0, 0, 0.5);
+  opacity: 0.5; /* Valor de opacidad */
+  animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100px); }
+}
+
