@@ -1,179 +1,358 @@
-.contenedor {
+body {
   display: flex;
   justify-content: center;
   position: relative;
+}
+
+background {
+  display: grid;
+  grid-template-columns: repeat(11, 35px);
+  grid-template-rows: repeat(17, 35px);
+  align-items: center;
+  justify-items: center;
+
+  position: relative;
   width: 400px; /* Ancho de la imagen */
   height: 600px; /* Alto de la imagen */
+  background-color: #9FC452;
 }
 
 /*DUCK ELEMENTS*/
-.duck {
-
+duck {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  bottom: 30%;
+  transform: rotate(-30deg);
 }
 
 /*----head----*/
-.head {
-  
-}
-
-.face {
+face {
   position: relative;
-  width: 260px;
-  height: 200px;
+  width: 140px;
+  height: 110px;
   background-color: #F5F5F5;
   border-radius: 50%;
+  z-index: 1;
+  box-shadow: -5px 0px 0px rgba(0, 0, 0, 0.2);
 }
 
-.eye {
-  position: relative;
-  width: 15px;
-  height: 15px;
+eye {
+  position: absolute;
+  width: 6px;
+  height: 6px;
   background-color: #242323;
   border-radius: 50%;
 }
 
-.beak {
-  position: relative;
-  width: 150px;
-  height: 90px;
+#left_eye {
+  top: 35%;
+  left: 35%; 
+}
+
+#right_eye {
+  top: 35%;
+  right: 35%; 
+}
+
+beak {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  
+  width: 65px;
+  height: 35px;
   background-color: #F5AA95;
   border-radius: 50%;
 }
 
 /*----body----*/
-.neck {
-  position: relative;
-  width: 90px;
-  height: 150px;
+neck {
+  position: absolute;
+  width: 40px;
+  height: 80px;
   background-color: #F5F5F5;
+  z-index: 0;
+  box-shadow: -5px 0px 0px rgba(0, 0, 0, 0.2);
 }
 
-.body {
+cuerpo {
   position: relative;
-  width: 250px;
-  height: 230px;
+  width: 125px;
+  height: 115px;
   background-color: #F5F5F5;
-  border-radius: 55%;
+  border-radius: 50%;
+  box-shadow: -5px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-.wing {
-  position: relative;
-  width: 85px;
-  height: 70px;
+wing {
+  position: absolute;
+  top: 20%;
+  width: 50px;
+  height: 40px;
   background-color: #F5F5F5;
-  border-radius: 55%;
-  border: 2px solid #E9DAD0;
+  border-radius: 50%;
+}
+
+wing:first-child {
+  left: 10%;
+  transform: rotate(-45deg);
+  border-left: 2px solid transparent;
+  border-right: 2px solid #E9DAD0;
+  border-top: 2px solid #E9DAD0;
+  border-bottom: 2px solid #E9DAD0;
+}
+
+wing:nth-child(2) {
+  right: -5%;
+  transform: rotate(35deg);
+  border-right: 2px solid transparent;
+  border-left: 2px solid #E9DAD0;
+  border-top: 2px solid #E9DAD0;
+  border-bottom: 2px solid #E9DAD0;
 }
 
 /*--bottom--*/
-.leg {
-  position: relative;
-  width: 20px;
-  height: 100px;
-  background-color: #F3AA92;
-  border-radius: 30%;
+leg {
+  background-color:#F5AA95;
+  bottom: -10%;
+  position: absolute;
+  width: 10px;
+  height: 60px;
+  border-radius: 10px;
 }
 
-.paw {
-  position: relative;
-  width: 40px;
-  height: 70px;
-  background-color: #F3AA92;
-  border-radius: 40%;
+leg:nth-child(4){
+  left: 47px;
 }
 
-.paw-bottom {
-  position: relative;
-  width: 38px;
-  height: 65px;
+leg:last-child{
+  right: 47px;
+}
+
+paw {
+  position: absolute;
+  width: 35px;
+  height: 50px;
+  border-radius: 15px;
+  background-color:#F5AA95;
+  bottom: -2%;
+}
+
+paw.bottom {
+  position: absolute;
+  width: 31px;
+  height: 46px;
   background-color: #F58B78;
-  border-radius: 40%;
+  border-radius: 15px;
 }
 
 /*FLOWER ELEMENTS*/
-.flower{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+flower{
+  position: relative;
+  width: 35px;
+  height: 35px;
 }
 
 .center{
   position: absolute;
-  height: 25px;
-  width: 25px;
+  height: 8px;
+  width: 10px;
   border-radius: 50%;
   background-color: #F5E182;
-  top: 50%;
-  left: 50%;
-  transform: translate(-7px, -80px);
+  top: 42%;
+  left: 43%;
 }
 
-.petal{
+petal{
   position: absolute;
-  height: 30px;
-  width: 30px;
+  height: 12px;
+  width: 12px;
   border-radius: 50%;
-  background-color: #E99ABA;
+  background-color: #FBFFFA;
 }
 
-.petal:nth-child(1) {
+petal:nth-child(2) {
   top: 50%;
   left: 50%;
-  transform: translate(-40%, -100px);
+  transform: translate(-4%, -10%);
+  box-shadow: -15px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-.petal:nth-child(2) {
+petal:nth-child(3) {
   top: 50%;
   left: 50%;
-  transform: translate(20%, -90px);
+  transform: translate(-58%, -10%);
 }
 
-.petal:nth-child(3) {
+petal:nth-child(4) {
   top: 50%;
   left: 50%;
-  transform: translate(0%, -70px);
+  transform: translate(-85%, -50%);
 }
 
-.petal:nth-child(4) {
+petal:nth-child(5) {
   top: 50%;
   left: 50%;
-  transform: translate(-60%, -70px);
+  transform: translate(-37%, -80%);
 }
 
-.petal:nth-child(5) {
+petal:nth-child(6) {
   top: 50%;
   left: 50%;
-  transform: translate(-80%, -90px);
+  transform: translate(15%, -50%);
 }
 
-.stem{
+stem{
+  position: absolute;
+  width: 3px;
+  height: 30px;
+  background-color: #587523;
+  top: 50%;
+  left: 50%;
+}
+
+leaf{
   position: absolute;
   width: 8px;
-  height: 50px;
-  background-color: #587523;
-}
-
-.leaf{
-  position: absolute;
-  width: 40px;
-  height: 20px;
+  height: 13px;
   background-color: #587523;
   border-radius: 50%;  
+  transform: rotate(-40deg);
+  top: 90%;
+  left: 30%;
+}
+
+#f2 {
+  transform: scale(0.6);
+}
+
+#f8 {
+  transform: scale(0.6);
+}
+
+#f9 {
+  position: absolute;
+  left: 310px; 
+  top:360px
+}
+
+#f9 > petal {
+  background-color: #FFFAAB;
+}
+
+leaf:last-child {
+  transform: rotate(45deg);
+  left: 60%;
+}
+
+grass {
+  display: grid;
+  grid-template-columns: repeat(3, 6px);
+  grid-gap: 1px;
+  width: 14px;
+  height: 18px;
+  align-self: end;
+}
+
+grassLeaf {
+  background-color: #89C460;
+  width: 6px;
+  height: 15px;
+  border-radius: 3px;
+  align-self: end;
+}
+
+grassLeaf:nth-child(even) {
+  transform: scaleY(0.6);
+}
+
+grass:nth-child(even) > grassLeaf {
+  background-color: #afca6a;
+}
+
+rocks {
+  display: grid;
+  grid-template-columns: repeat(3, 10px);
+  grid-template-rows: repeat(3, 10px);
+  align-content: center;
+}
+
+rock {
+  width: 6px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #C9DCF4;
+}
+
+rocks:nth-child(odd) > rock {
+  background-color: #FFDD53;
+}
+
+rocks ~ rock {
+  background-color: #AD69B5;
+  transform: scale(2.0);
+}
+
+rock:nth-child(even){
+  transform: scale(1.5);
 }
 
 /*EXTRAS*/
-.nube {
-  width: 200px;
-  height: 50px;
-  background-color: grey;
+cielo {
+  position: absolute;
+  width: 400px; /* Ancho de la imagen */
+  height: 600px; /* Alto de la imagen */
+  transform: rotate(-30deg);
+}
+
+nube {
+  position: absolute;
+  background-color: rgb(10, 51, 17);
   border-radius: 40px; 
-  box-shadow: -20px 20px 0px rgba(0, 0, 0, 0.5);
-  opacity: 0.5; /* Valor de opacidad */
+  box-shadow: 25px 15px 0px rgba(0, 0, 0, 0.3);
+  opacity: 0.3; /* Valor de opacidad */
   animation: move 2s infinite alternate;
+  transition: background-color 0.3s ease;
+}
+
+nube:first-child{
+  width: 300px;
+  height: 80px;
+  top: 8%;
+  left: 50%
+}
+
+nube:nth-child(2){
+  width: 100px;
+  height: 40px;
+  top: 98%;
+  right: 30%;
+}
+nube:nth-child(3){
+  width: 200px;
+  height: 80px;
+  top: 40%;
+  right: -10%;
+}
+nube:nth-child(4){
+  width: 250px;
+  height: 100px;
+  top: 70%;
+  left: -40%;
+}
+
+nube:last-child{
+  width: 150px;
+  height: 40px;
+  top: 36%;
+  left: -10%
 }
 
 @keyframes move {
   0% { transform: translateX(0); }
-  100% { transform: translateX(100px); }
+  100% { transform: translateX(50px); }
 }
 
