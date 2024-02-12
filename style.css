@@ -138,7 +138,7 @@ paw {
   height: 50px;
   border-radius: 15px;
   background-color:#F5AA95;
-  bottom: -2%;
+  bottom: -5%;
 }
 
 paw.bottom {
@@ -235,8 +235,7 @@ leaf{
 
 #f9 {
   position: absolute;
-  left: 310px; 
-  top:360px
+  transform: translate(0px, 360px);
 }
 
 #f9 > petal {
@@ -291,6 +290,10 @@ rocks:nth-child(odd) > rock {
   background-color: #FFDD53;
 }
 
+rocks > rock:nth-child(odd) {
+  background-color: #ffdd5300;
+}
+
 rocks ~ rock {
   background-color: #AD69B5;
   transform: scale(2.0);
@@ -301,6 +304,13 @@ rock:nth-child(even){
 }
 
 /*EXTRAS*/
+.cut {
+  position: absolute;
+  width: 400px; /* Ancho de la imagen */
+  height: 600px; /* Alto de la imagen */
+  overflow: hidden;
+}
+
 cielo {
   position: absolute;
   width: 400px; /* Ancho de la imagen */
@@ -314,8 +324,12 @@ nube {
   border-radius: 40px; 
   box-shadow: 25px 15px 0px rgba(0, 0, 0, 0.3);
   opacity: 0.3; /* Valor de opacidad */
-  animation: move 2s infinite alternate;
-  transition: background-color 0.3s ease;
+  animation: move 3s infinite alternate;
+}
+
+@keyframes move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50px); }
 }
 
 nube:first-child{
@@ -349,10 +363,5 @@ nube:last-child{
   height: 40px;
   top: 36%;
   left: -10%
-}
-
-@keyframes move {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(50px); }
 }
 
